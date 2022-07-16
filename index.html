@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nicolas Fernandez — Design graphique</title>
+    <meta name="keywords" content="Nicolas Fernandez — design graphique">
+    <meta name="description" content="Designer graphique et étudiant à l'ESAD d'Amiens">
+    <link rel=stylesheet href="styles.css">
+    <!--<link rel="icon" href="favicon.ico">-->
+
+
+</head>
+
+<style>
+    html {
+        background-color: #CCFF33;
+    }
+
+    .lienmenu {
+        border-color: #CCFF33;
+    }
+
+    .lienmenu:hover {
+        border-color: black;
+    }
+
+    .header {
+        background-color: #CCFF33;
+    }
+</style>
+
+
+<body>
+    <!----------------------------------------début du menu---------------------------------------->
+    <!--------------------------------------------------------------------------------------------->
+    <header class="header">
+        <!-- Logo -->
+        <a href="index.html"><img class="logo" alt="Studio Raphaël" src="img/logo.png"></a>
+
+        <!-- Hamburger icon -->
+        <input class="side-menu" type="checkbox" id="side-menu" />
+        <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
+
+        <!-- Menu -->
+        <nav class="nav">
+            <ul class="menu">
+                <li><a class=lienmenu href="identite.html">Solutions</a></li>
+                <li><a class=lienmenu href="about.html">À propos</a> </li>
+                <li><div class=boutonmenu><a class="button" href="contact.html">Devis & contact →</a></div></li>
+            </ul>
+        </nav>
+    </header>
+    <!-----------------------------------------fin du menu----------------------------------------->
+    <!--------------------------------------------------------------------------------------------->
+
+    <div class="section">
+        <h1 style="font-size: 6vw; line-height: 1.2;">Nous conçevons des<br><span class="auto-type"></span><br>pour
+            votre entreprise.</h1>
+        <br><br>
+
+        <!---------------------------------- début du script animation-------------------------------->
+        <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+        <script>
+            var typed = new Typed(".auto-type", {
+                strings: ["identité visuelle.", "site internet.", "affiches", "flyers", "brochures", "logos", "cartes de visite."],
+                typeSpeed: 50,
+                backSpeed: 120,
+                loop: true
+            })
+        </script>
+        <style>
+            .auto-type {
+                background-color: black;
+                color: #CCFF33;
+            }
+        </style>
+        <!----------------------------------- fin du script animation--------------------------------->
+
+        <img src="img/landing.svg" alt="" height="100%" width="100%" />
+
+        <div class="grille_4">
+            <div>
+                <h2>Logo & identités visuelles</h2>
+                <p>En fonction de votre budget et de la complexité du projet, le site internet est codé par nos
+                    soins ou
+                    nous utilisons un CMS (par exemple : Webflow).</p>
+                <div
+                    style="display: grid; grid-template-columns: 180px 1fr; padding-top: 20px; padding-bottom: 40px; gap: 30px;">
+                    <a class="button" href="identite.html">En savoir plus →</a>
+                    <div></div>
+                </div>
+            </div>
+            <div>
+                <h2>Supports imprimés</h2>
+                <p>En fonction de votre budget et de la complexité du projet, le site internet est codé par nos
+                    soins ou
+                    nous utilisons un CMS (par exemple : Webflow).</p>
+                <div
+                    style="display: grid; grid-template-columns: 180px 1fr; padding-top: 20px; padding-bottom: 40px; gap: 30px;">
+                    <a class="button" href="print.html">En savoir plus →</a>
+                    <div></div>
+                </div>
+            </div>
+            <div>
+                <h2>Sites internet</h2>
+                <p>En fonction de votre budget et de la complexité du projet, le site internet est codé par nos
+                    soins ou
+                    nous utilisons un CMS (par exemple : Webflow).</p>
+                <div
+                    style="display: grid; grid-template-columns: 180px 1fr; padding-top: 20px; padding-bottom: 40px; gap: 30px;">
+                    <a class="button" href="web.html">En savoir plus →</a>
+                    <div></div>
+                </div>
+            </div>
+            <div>
+                <h2>Réseaux sociaux</h2>
+                <p>En fonction de votre budget et de la complexité du projet, le site internet est codé par nos
+                    soins ou
+                    nous utilisons un CMS (par exemple : Webflow).</p>
+                <div
+                    style="display: grid; grid-template-columns: 180px 1fr; padding-top: 20px; padding-bottom: 40px; gap: 30px;">
+                    <a class="button" href="reseaux.html">En savoir plus →</a>
+                    <div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p class="caption">Fait avec ❤️ à Lille. <a class="link" href="privacy.html">Mentions légales et données
+                personnelles →</a></p>
+    </div>
+</body>
+
+</html>

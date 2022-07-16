@@ -1,0 +1,598 @@
+* {
+    margin: 0px;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+
+:root {
+    --lime: #CCFF33;
+    --violet: #0B1BF9;
+    --white: #f6f6f6;
+    --black: black;
+}
+
+html {
+    background-color: var(--white);
+    color: var(--violet);
+    font-family: 'Inter', Helvetica, sans-serif;
+}
+
+/*_______________________________________HEADER & NAV_______________________________________*/
+/*__________________________________________________________________________________________*/
+
+
+
+/* header */
+
+.header {
+    background-color: var(--lime);
+    border-bottom: 1.5px solid;
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+}
+
+.header ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+}
+
+.lienmenu,
+.boutonmenu {
+    display: block;
+    text-decoration: none;
+
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 30px;
+    margin-right: 30px;
+
+    padding-bottom: 20px;
+}
+
+.lienmenu:hover,
+.header .menu-btn:hover {
+}
+
+.header .logo {
+    display: block;
+    float: left;
+    font-size: 2em;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+
+/* menu */
+
+.header .menu {
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+}
+
+/* menu icon */
+
+.header .menu-icon {
+    cursor: pointer;
+    display: inline-block;
+    float: right;
+    padding: 28px 20px;
+    position: relative;
+    user-select: none;
+}
+
+.header .menu-icon .navicon {
+    background: #333;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: .2s ease-out;
+    width: 18px;
+}
+
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+    background: #333;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+
+.header .menu-icon .navicon:before {
+    top: 5px;
+}
+
+.header .menu-icon .navicon:after {
+    top: -5px;
+}
+
+/* menu btn */
+
+.header .menu-btn {
+    display: none;
+}
+
+.header .menu-btn:checked~.menu {
+    max-height: 240px;
+}
+
+.header .menu-btn:checked~.menu-icon .navicon {
+    background: transparent;
+}
+
+.header .menu-btn:checked~.menu-icon .navicon:before {
+    transform: rotate(-45deg);
+}
+
+.header .menu-btn:checked~.menu-icon .navicon:after {
+    transform: rotate(45deg);
+}
+
+.header .menu-btn:checked~.menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked~.menu-icon:not(.steps) .navicon:after {
+    top: 0;
+}
+
+
+
+/*===============version ordinateur=================*/
+@media (min-width: 900px) {
+    .header li {
+        float: left;
+    }
+
+    .lienmenu,
+    .boutonmenu {
+        margin-top: 14px;
+        margin-bottom: 10px;
+        margin-right: 30px;
+
+        padding-top: 10px;
+        padding-bottom: 10px;
+
+        border-bottom: 4px solid;
+        border-color: transparent;
+    }
+
+    .header .menu {
+        clear: none;
+        float: right;
+        max-height: none;
+    }
+
+    .lienmenu:hover,
+    .header .menu-btn:hover {
+        border-bottom: 4px solid;
+        border-color: var(--violet);
+    }
+
+
+    .header .menu-icon {
+        display: none;
+    }
+}
+
+
+
+/*____________________________________SECTION ET GRILLES____________________________________*/
+/*__________________________________________________________________________________________*/
+
+.section {
+    padding: 6%;
+    -moz-animation: fadein 1s;
+    /* Firefox */
+    -webkit-animation: fadein 1s;
+    /* Safari and Chrome */
+    -o-animation: fadein 1s;
+    /* Opera */
+}
+
+/*________grille 2__________*/
+.grille_2 {
+    display: block;
+}
+
+@media (min-width:950px) {
+    .grille_2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 50px;
+    }
+}
+
+
+/*__________grille 3_________*/
+.grille_3 {
+    display: block;
+}
+
+@media (min-width:950px) {
+    .grille_3 {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 50px;
+    }
+}
+
+/*________grille 4__________*/
+.grille_4 {
+    display: block;
+}
+
+@media (min-width:950px) {
+    .grille_4 {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 50px;
+    }
+}
+
+
+/*__________________________________________AUTRES__________________________________________*/
+/*__________________________________________________________________________________________*/
+
+
+.header_offre {
+    background-color: var(--violet);
+    color: var(--white);
+    padding: 8%;
+    margin-top: 30px;
+    border-top-left-radius: 0.75rem;
+    border-top-right-radius: 0.75rem;
+    text-align: center;
+}
+
+.body_offre {
+    background-color: var(--white);
+    border-bottom-left-radius: 0.75rem;
+    border-bottom-right-radius: 0.75rem;
+    box-shadow: rgba(0, 0, 0, 0.10) 0 10px 10px 0;
+    margin-bottom: 30px;
+    padding: 8%;
+}
+
+
+/*________grille contact__________*/
+.section_contact {
+    display: block;
+}
+
+@media (min-width:950px) {
+    .section_contact {
+        display: grid;
+        grid-template-columns: 1fr 2.5fr;
+    }
+}
+
+
+
+/*________FOOTER__________*/
+.footer {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-top: 1px solid;
+    text-align: center;
+}
+
+
+
+
+
+
+
+/*______________________________________ONGLETS SOLUTIONS______________________________________*/
+/*_____________________________________________________________________________________________*/
+
+.onglets {
+    display: block;
+}
+
+@media (min-width:950px) {
+    .onglets {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
+.solution {
+    background-color: var(--white);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+
+    border-bottom: 1px solid;
+    border-left: 0.5px solid;
+    border-right: 0.5px solid;
+    transition: all 250ms;
+}
+
+.solution_current {
+    background-color: var(--lime);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+
+    border-bottom: 1px solid;
+    border-left: 0.5px solid;
+    border-right: 0.5px solid;
+    transition: all 250ms;
+}
+
+.solution:hover,
+.solution_current:hover {
+    border-top: 1px solid;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.20);
+    transform: translateY(-5px);
+}
+
+
+.banner {
+    background-color: var(--lime);
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 30px;
+    padding-right: 30px;
+
+    border-bottom: 1px solid;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.20);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*______________________________________TEXTES & LIENS______________________________________*/
+/*__________________________________________________________________________________________*/
+
+h1 {
+    font-weight: normal;
+    font-size: 30px;
+    letter-spacing: -0.021em;
+    line-height: 42px;
+
+    padding-bottom: 10px;
+}
+
+
+h2 {
+    font-weight: bold;
+    font-size: 20px;
+    letter-spacing: -0.017em;
+    line-height: 28px;
+
+    padding-bottom: 8px;
+}
+
+h3,
+.h3 {
+    font-weight: bold;
+    font-size: 15px;
+    letter-spacing: -0.009em;
+    line-height: 21px;
+
+    padding-bottom: 5px;
+}
+
+
+p,
+.p,
+li {
+    font-weight: normal;
+    font-size: 15px;
+    letter-spacing: -0.009em;
+
+    line-height: 21px;
+}
+
+.caption {
+    font-size: 12px;
+    letter-spacing: 0em;
+    line-height: 17px;
+}
+
+
+
+a {
+    text-decoration: none;
+    color: var(--violet);
+}
+
+ul {
+    list-style-type: '– ';
+    margin: 0;
+    padding-left: 30px;
+}
+
+.link {
+    text-decoration: underline;
+}
+
+.link:hover {
+    background-color: var(--lime);
+}
+
+
+
+
+/*__________________________________________IMAGES__________________________________________*/
+/*__________________________________________________________________________________________*/
+
+img {
+    width: 100%;
+}
+
+.logo {
+    padding: 20px;
+    width: 100px;
+}
+
+
+hr {
+    border: none;
+    height: 1px;
+    background-color: var(--violet);
+    width: 100%;
+}
+
+
+iframe {
+    width: 100%;
+    height: 1000px;
+}
+
+
+
+/*__________________________________________BOUTONS_________________________________________*/
+/*__________________________________________________________________________________________*/
+.button {
+    font-size: 16px;
+    line-height: 1.0;
+    text-align: center;
+
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+
+    background-color: var(--violet);
+    color: white;
+    border: 1px solid var(--violet);
+    border-radius: 0.75rem;
+    box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+    text-decoration: none;
+    transition: all 250ms;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: auto;
+}
+
+.button:hover,
+.button:focus {
+    box-shadow: rgba(0, 0, 0, 0.30) 0 4px 12px;
+}
+
+.button:hover {
+    transform: translateY(-2px);
+    background-color: transparent;
+    color: var(--violet);
+}
+
+.button:active {
+    background-color: var(--white);
+    border-color: rgba(0, 0, 0, 0.15);
+    box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
+    color: rgba(0, 0, 0, 0.65);
+    transform: translateY(0);
+}
+
+
+
+
+
+
+
+
+/*______________________________________IMPORTS TYPO________________________________________*/
+/*__________________________________________________________________________________________*/
+
+@font-face {
+    font-family: "Inter";
+    src: url(fonts/inter_light.woff2) format("woff2");
+    font-weight: 100;
+    /* light */
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url(fonts/inter_regular.woff2) format("woff2");
+    font-weight: normal;
+    /* regular */
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url(fonts/inter_bold.woff2) format("woff2");
+    font-weight: bold;
+    /* bold */
+}
+
+
+
+
+
+/*____________________________________ANIMATIONS PAGE_______________________________________*/
+/*__________________________________________________________________________________________*/
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes fadein {
+
+    /* Firefox */
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadein {
+
+    /* Safari and Chrome */
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@-o-keyframes fadein {
+
+    /* Opera */
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

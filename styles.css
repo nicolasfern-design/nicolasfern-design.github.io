@@ -4,16 +4,26 @@
     scrollbar-width: none;
 }
 
+/*
 :root {
     --lime: #CCFF33;
-    --violet: #0B1BF9;
+    --blue: #0B1BF9;
+    --white: #f6f6f6;
+    --black: black;
+}
+*/
+
+:root {
+    --lime: #c2f8af;
+    --blue: #0338f9;
     --white: #f6f6f6;
     --black: black;
 }
 
+
 html {
     background-color: var(--white);
-    color: var(--violet);
+    color: var(--blue);
     font-family: 'Inter', Helvetica, sans-serif;
 }
 
@@ -27,7 +37,7 @@ html {
 
 .header {
     background-color: var(--white);
-    border-bottom: 1.5px solid;
+    border-bottom: 1px solid;
     position: fixed;
     width: 100%;
     z-index: 3;
@@ -55,6 +65,7 @@ html {
 
 .lienmenu:hover,
 .header .menu-btn:hover {
+    transition: all 250ms;
 }
 
 .header .logo {
@@ -170,7 +181,7 @@ html {
     .lienmenu:hover,
     .header .menu-btn:hover {
         border-bottom: 4px solid;
-        border-color: var(--violet);
+        border-color: var(--blue);
     }
 
 
@@ -187,7 +198,7 @@ html {
 
 
 .section {
-    padding: 6%;
+    padding: 7%;
     -moz-animation: fadein 1s;
     /* Firefox */
     -webkit-animation: fadein 1s;
@@ -201,7 +212,7 @@ html {
     display: block;
 }
 
-@media (min-width:950px) {
+@media (min-width: 900px) {
     .grille_2 {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -215,7 +226,7 @@ html {
     display: block;
 }
 
-@media (min-width:950px) {
+@media (min-width: 900px) {
     .grille_3 {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
@@ -228,7 +239,7 @@ html {
     display: block;
 }
 
-@media (min-width:950px) {
+@media (min-width: 900px) {
     .grille_4 {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -242,7 +253,7 @@ html {
 
 
 .header_offre {
-    background-color: var(--violet);
+    background-color: var(--blue);
     color: var(--white);
     padding: 8%;
     margin-top: 30px;
@@ -261,15 +272,43 @@ html {
 }
 
 
+
 /*________grille contact__________*/
 .section_contact {
     display: block;
+    border-bottom: 1px solid;
 }
 
-@media (min-width:950px) {
+@media (min-width: 900px) {
     .section_contact {
         display: grid;
-        grid-template-columns: 1fr 2.5fr;
+        grid-template-columns: 1fr 2fr;
+    }
+}
+
+
+/*________grille privacy____*/
+.section_privacy {
+    border-left: 1px solid;
+
+    margin-left: 5%;
+
+    padding-top: 5%;
+    padding-bottom: 5%;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+@media (min-width: 900px) {
+    .section_privacy {
+        border-left: 1px solid;
+
+        margin-left: 10%;
+
+        padding-top: 5%;
+        padding-bottom: 5%;
+        padding-left: 5%;
+        padding-right: 25%;
     }
 }
 
@@ -291,7 +330,7 @@ html {
     display: block;
 }
 
-@media (min-width:950px) {
+@media (min-width: 900px) {
     .onglets {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -418,7 +457,7 @@ li {
 
 a {
     text-decoration: none;
-    color: var(--violet);
+    color: var(--blue);
 }
 
 ul {
@@ -454,7 +493,7 @@ img {
 hr {
     border: none;
     height: 1px;
-    background-color: var(--violet);
+    background-color: var(--blue);
     width: 100%;
 }
 
@@ -479,9 +518,9 @@ iframe {
     padding-right: 20px;
 
 
-    background-color: var(--violet);
+    background-color: var(--blue);
     color: white;
-    border: 1px solid var(--violet);
+    border: 1px solid var(--blue);
     border-radius: 0.75rem;
     box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
     text-decoration: none;
@@ -494,13 +533,13 @@ iframe {
 
 .button:hover,
 .button:focus {
-    box-shadow: rgba(0, 0, 0, 0.30) 0 4px 12px;
+    /*box-shadow: rgba(0, 0, 0, 0.30) 0 4px 12px;*/
 }
 
 .button:hover {
-    transform: translateY(-2px);
+    /*transform: translateY(-2px);*/
     background-color: transparent;
-    color: var(--violet);
+    color: var(--blue);
 }
 
 .button:active {

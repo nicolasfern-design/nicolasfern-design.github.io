@@ -12,11 +12,11 @@
     --black: black;
 }
 
-@import url('https://rsms.me/inter/inter.css');
-html { font-family: 'Inter', sans-serif; }
-@supports (font-variation-settings: normal) {
-  html { font-family: 'Inter var', sans-serif; }
+
+html {
+    font-family: 'Inter', sans-serif;
 }
+
 
 
 
@@ -207,7 +207,7 @@ html {
 
 
 .section {
-    padding: 7%;
+    padding: 6%;
     -moz-animation: fadein 1s;
     /* Firefox */
     -webkit-animation: fadein 1s;
@@ -245,7 +245,9 @@ html {
 
 /*________grille 4__________*/
 .grille_4 {
-    display: block;
+display: grid;
+grid-template-columns: 1fr;
+gap: 50px;
 }
 
 @media (min-width: 900px) {
@@ -260,6 +262,12 @@ html {
 /*__________________________________________AUTRES__________________________________________*/
 /*__________________________________________________________________________________________*/
 
+.offre{
+    transition: all 250ms;
+}
+.offre:hover {
+    transform: translateY(-5px);
+}
 
 .header_offre {
     background-color: var(--blue);
@@ -273,6 +281,7 @@ html {
 
 .body_offre {
     background-color: var(--white);
+    border: 1px solid;
     border-bottom-left-radius: 0.75rem;
     border-bottom-right-radius: 0.75rem;
     box-shadow: rgba(0, 0, 0, 0.10) 0 10px 10px 0;
@@ -297,7 +306,7 @@ html {
 
 
 /*________grille privacy____*/
-.section_privacy {
+.section_texte {
     border-left: 1px solid;
 
     margin-left: 5%;
@@ -309,7 +318,7 @@ html {
 }
 
 @media (min-width: 900px) {
-    .section_privacy {
+    .section_texte {
         border-left: 1px solid;
 
         margin-left: 10%;
@@ -317,7 +326,7 @@ html {
         padding-top: 5%;
         padding-bottom: 5%;
         padding-left: 5%;
-        padding-right: 25%;
+        padding-right: 30%;
     }
 }
 
@@ -345,23 +354,32 @@ html {
 }
 
 
-.grille_solutions{
+.grille_solutions {
     display: block;
+}
+
+.solution {
+    padding: 20px;
     border-top: 1px solid;
-    border-bottom: 1px solid;
 }
 
 @media (min-width: 900px) {
-    .grille_solutions{
+    .grille_solutions {
         display: grid;
-        grid-template-columns: 1.5fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
 
         padding-left: 5%;
         padding-right: 5%;
-        border-top: 1px solid;
-        border-bottom: 1px solid;
+    }
+
+    .solution {
+        padding: 20px;
+        border-left: 1px solid;
+        border-top: 0px solid;
+        border-bottom: 0px solid;
     }
 }
+
 
 
 
@@ -386,7 +404,7 @@ html {
 /*__________________________________________________________________________________________*/
 
 h1 {
-    font-weight: normal;
+    font-weight: 300;
     font-size: 40px;
     letter-spacing: -0.022em;
     line-height: 56px;
@@ -396,7 +414,7 @@ h1 {
 
 
 h2 {
-    font-weight: normal;
+    font-weight: 300;
     font-size: 30px;
     letter-spacing: -0.021em;
     line-height: 42px;
@@ -405,19 +423,25 @@ h2 {
 }
 
 h3 {
-    font-weight: 700;
+    font-weight: 600;
     font-size: 20px;
     letter-spacing: -0.017em;
     line-height: 28px;
     padding-bottom: 8px;
+}
 
+h4 {
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: -0.009em;
+    line-height: 21px;
 }
 
 
 p,
 .p,
 li {
-    font-weight: normal;
+    font-weight: 300;
     font-size: 15px;
     letter-spacing: -0.009em;
     line-height: 21px;
@@ -581,4 +605,76 @@ iframe {
     to {
         opacity: 1;
     }
+}
+
+
+
+
+
+
+
+
+/* imports typo */
+@font-face {
+    font-family: "Inter";
+    src: url(fonts/100.woff2) format("woff2");
+    font-weight: 100;
+    /* thin */
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url(fonts/200.woff2) format("woff2");
+    font-weight: 200;
+    /* extra light */
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url(fonts/300.woff2) format("woff2");
+    font-weight: 300;
+    /* light */
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url(fonts/400.woff2) format("woff2");
+    font-weight: 400;
+    /* regular */
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url(fonts/500.woff2) format("woff2");
+    font-weight: 500;
+    /* medium */
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url(fonts/600.woff2) format("woff2");
+    font-weight: 600;
+    /* semibold */
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url(fonts/700.woff2) format("woff2");
+    font-weight: 700;
+    /* bold */
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url(fonts/800.woff2) format("woff2");
+    font-weight: 800;
+    /* black */
+}
+
+
+@font-face {
+    font-family: "Inter";
+    src: url(fonts/900.woff2) format("woff2");
+    font-weight: 900;
+    /* ultra black */
 }

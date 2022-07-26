@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nicolas Fernandez — Design graphique</title>
+    <meta name="keywords" content="Nicolas Fernandez — design graphique">
+    <meta name="description" content="Designer graphique et étudiant à l'ESAD d'Amiens">
+    <link rel=stylesheet href="styles.css">
+    <script src="script.js" defer></script>
+    <!--<link rel="icon" href="favicon.ico">-->
+
+
+</head>
+
+
+
+<body>
+    <!----------------------------------------début du menu---------------------------------------->
+    <!--------------------------------------------------------------------------------------------->
+    <header class="header">
+        <a href="index.html"><img class="logo" alt="Studio Raphaël" src="img/logo.svg"></a>
+        <input class="menu-btn" type="checkbox" id="menu-btn" />
+        <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+        <ul class="menu">
+            <li><a class=lienmenu href="identite.html">Créer</a></li>
+            <li><a class=lienmenu href="print.html">Supports imprimés</a></li>
+            <li><a class=lienmenu href="web.html">Lutter</a></li>
+            <li><a class=lienmenu href="work.html">À propos</a></li>
+            <li>
+                <div class=boutonmenu><a class="button" href="contact.html">Publier →</a></div>
+            </li>
+        </ul>
+    </header>
+
+    <div style="padding-top: 70px;"><span></span></div>
+    <!--ajustement marge-->
+    <!-----------------------------------------fin du menu----------------------------------------->
+    <!--------------------------------------------------------------------------------------------->
+
+    <div class="section">
+        <div class="search-wrapper">
+            <label class=".h2" for="search">Rechercher parmi les articles</label>
+            <input type="search" id="search" placeholder="Commencez à écrire pour rechercher" data-search>
+          </div>
+          <div class="user-cards" data-user-cards-container></div>
+          <template data-user-template>
+            <div class="card">
+              <div class="data-header" data-header></div>
+              <div class="data-body" data-body></div>
+            </div>
+          </template>
+          <p>Fin des résultats</p>
+    </div>
+
+
+    <div class="footer">
+        <p class="caption">Fait avec ❤️ à Lille. <a class="link" href="privacy.html">Mentions légales →</a></p>
+    </div>
+</body>
+
+</html>

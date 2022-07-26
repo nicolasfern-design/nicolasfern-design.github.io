@@ -11,6 +11,7 @@
     "name": "Nom de l'article B",
     "author": "par Diane",
     "tag": "tag1, tag2, tag3",
-    "text": "laudantium enim quasi est quidem magnam voluptate ipsam eos\ntempora quo necessitatibus\ndolor quam autem quasireiciendis et nam sapiente accusantium"
+    "text": "laudantium enim quasi est quidem magnam voluptate ipsam eos\ntempora quo necessitatibus\ndolor quam autem quasireiciendis et nam sapiente accusantium",
+    "link": "https://www.google.com"
   }
 ]

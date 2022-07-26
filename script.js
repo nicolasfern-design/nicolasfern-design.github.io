@@ -24,7 +24,7 @@ fetch("https://nicolasfern-design.github.io/data.json")
       const header = card.querySelector("[data-header]")
       const body = card.querySelector("[data-body]")
       header.textContent = user.name
-      body.textContent = user.email, user.author, user.tag, user.text
+      body.textContent = user.author + user.tag + user.text
       userCardContainer.append(card)
       return { name: user.name, email: user.email, element: card }
     })

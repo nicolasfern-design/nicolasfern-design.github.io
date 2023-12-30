@@ -46,7 +46,7 @@ html {
   margin-right: 0;
 
   padding: 20px;
-  margin-bottom: 24px;
+  margin-bottom: 100px;
 
   /*box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;*/
 }
@@ -138,6 +138,8 @@ h1 {
 h2 {
   margin: var(--size) 0;
   line-height: 1.1;
+  padding-bottom: 5px;
+  border-bottom: 0.5px solid;
 }
 
 
@@ -183,12 +185,11 @@ a {
 }
 
 a:not(nav a, footer a) {
-  text-decoration: underline;
+color: var(--blue);
 }
 
 a:not(nav a):hover {
-  background-color: var(--blue);
-  color: var(--white);
+  text-decoration: underline;
 }
 
 table {
@@ -233,8 +234,8 @@ box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 @media (min-width: 900px) {}
 
 figure {
-  margin-top: 5vh;
-  margin-bottom: 5vh;
+  margin-top: 10vh;
+  margin-bottom: 10vh;
 }
 
 video {
@@ -373,13 +374,30 @@ html {
   top: 0;
   position: fixed;
   width: 100%;
-  height: 2px;
+  height: 3px;
   background: transparent;
 }
 
 /* The progress bar (scroll indicator) */
 .progress-bar {
-  height: 2px;
+  height: 3px;
   background: var(--blue);
   width: 0%;
+}
+
+
+
+
+a[href^="http"]::after,
+a[href^="https://"]::after
+{
+  content: "";
+  width: 11px;
+  height: 11px;
+  margin-left: 4px;
+  background-image: url("../css/external_link.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: inline-block;
 }
